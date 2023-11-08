@@ -1,0 +1,5 @@
+@use 'base/variables' as v;
+.anuncio{
+    padding-bottom: calc(v.$separacion / 2);
+    max-width: 80rem;
+}

@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+.contactanos{
+    position: relative;
+    & picture img{
+        min-height: 50rem;
+        object-fit: cover;
+    }
+    &__banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        top: 0;
+
+        & h2, p{
+            color: v.$blanco;
+        }
+    }
+}
+
+.contacto__forma{
+            display: flex;
+        flex-direction: column;
+        width: 100%;
+}

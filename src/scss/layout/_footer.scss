@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.footer{
+    padding: 5rem;
+    background-color: lighten(v.$grisOscuro, 5);
+
+    & .navegacion{
+        display: flex;
+        justify-content: start;
+        font-size: 2rem;
+    }
+
+    &__p{
+        color: v.$blanco;
+        text-align: center;
+    }
+}

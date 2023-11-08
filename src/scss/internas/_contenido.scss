@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__h3{
+        font-weight: v.$bold;
+    }
+
+    &__h4{
+        font-weight: v.$delgada;
+    }
+}
+
+
+

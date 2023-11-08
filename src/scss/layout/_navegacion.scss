@@ -1,0 +1,86 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 v.$separacion;
+
+    &__logos{
+        @include m.tablet{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @include m.tablet{
+        flex-direction: row;
+    }
+
+    &__h1{
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-size: 4rem;
+
+        @include m.tablet{
+            font-size: 4rem;
+        }
+    }
+
+    &__h1--span{
+        font-weight: v.$bold;
+    }
+    &__ul{
+        list-style: none;
+        text-decoration: none;
+        padding-left: 0;
+        font-size: 2rem;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: display .3s ease-in-out, opacity .5s linear, height .5s linear;
+
+        @include m.tablet{
+            display: flex;
+            font-size: 2rem;
+            height: 100%;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__a{
+        color: v.$blanco;
+        font-weight: v.$bold;
+        
+        @include m.tablet{
+            margin-right: 1rem;
+            font-weight: v.$delgada;
+        }
+
+        &:hover {
+            color: v.$verde;
+        }
+    }
+
+    &__darkmode{
+        filter: invert(100%);
+        cursor: pointer;
+    }
+
+    &__barra{
+        cursor:pointer;
+
+        @include m.tablet{
+            display: none;
+        }
+    }
+}
+
+.aparecer{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}

@@ -1,0 +1,20 @@
+{
+    "name": "junhy/bienesraices_proyecto",
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "JunhyV",
+            "email": "jonhy.kisi@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7",
+        "phpmailer/phpmailer": "^6.8"
+    }
+}

@@ -1,0 +1,55 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.blog {
+  @include m.espaciado(80rem);
+  padding: 1rem;
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__card {
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+
+  &__link {
+    text-decoration: none;
+    color: v.$negro;
+
+    & h3 {
+      font-size: 2.5rem;
+      font-weight: v.$bold;
+      text-align: start;
+      margin: 0;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 15rem;
+        height: 0.5rem;
+        background-color: #71b100;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__span {
+    color: v.$amarillo;
+  }
+
+  //Blog-entrada.html
+  &__texto{
+    padding: 1rem;
+  }
+  &__entrada{
+    max-height: 40rem;
+  }
+}

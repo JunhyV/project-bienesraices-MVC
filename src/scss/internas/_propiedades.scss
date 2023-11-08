@@ -1,0 +1,20 @@
+@use "../base/variables" as v;
+.propiedades {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  max-width: 120rem;
+  text-align: center;
+  & thead {
+    background-color: v.$verde;
+    color: v.$blanco;
+  }
+  & img {
+    width: 20rem;
+    height: 10rem;
+  }
+}

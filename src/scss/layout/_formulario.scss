@@ -1,0 +1,65 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.formulario {
+  @include m.espaciado(120rem);
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__formato {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid v.$negro;
+    padding: 2rem;
+    position: relative;
+
+    & input,
+    textarea,
+    select,
+    option {
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  & input[type="submit"] {
+    background-color: v.$verde;
+    border: none;
+    display: flex;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-weight: v.$bold;
+    margin-bottom: 2rem;
+  }
+}
+
+//Tamaño de p PEQUEÑO
+.mini {
+  font-size: 1.2rem;
+}
+
+//
+.error{
+  background-color: v.$rojo;
+  text-align: center;
+  color: v.$blanco;
+}
+//Separacion en los radio
+.contacto {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+.legend {
+  position: absolute;
+  top: -4rem;
+  background-color: v.$blanco;
+
+  &__darkmode {
+    background-color: darken(v.$grisOscuro, 8);
+  }
+}

@@ -1,0 +1,28 @@
+@use '../base/variables' as v;
+.alerta-verde{
+    width: 100%;
+    background-color: v.$verde;
+    max-width: 120rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: v.$blanco;
+    text-transform: uppercase;
+    font-weight: v.$bold;
+    padding: 1rem;
+}
+.alerta-roja{
+    width: 100%;
+    background-color: v.$rojo;
+    max-width: 120rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: v.$blanco;
+    text-transform: uppercase;
+    font-weight: v.$bold;
+    padding: 1rem;
+}
+
+.crud{
+    width: 100%;
+    max-width: 100rem;
+}

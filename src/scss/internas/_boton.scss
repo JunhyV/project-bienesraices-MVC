@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.boton-verde{
+    @include m.boton(v.$verde);
+}
+.boton-amarillo{
+    @include m.boton(v.$amarillo);
+}
+.boton-rojo{
+    @include m.boton(v.$rojo);
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:fit-content;
+}

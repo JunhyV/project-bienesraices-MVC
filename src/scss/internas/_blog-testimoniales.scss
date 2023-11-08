@@ -1,0 +1,8 @@
+@use 'base/mixins' as m;
+.blog-testimoniales{
+    @include m.espaciado(120rem);
+    @include m.desktop{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}

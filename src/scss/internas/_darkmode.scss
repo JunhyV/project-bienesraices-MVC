@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+.darkmode{
+    background-color: darken(v.$grisOscuro, 8);
+
+    & h1, h2, h3, h4, p, label{
+        color: v.$blanco;
+    }
+    & input, textarea, select, option{
+        border: none;
+        background-color: lighten(v.$grisOscuro, 5);
+        color: v.$blanco;
+    }
+
+    & .anuncios__card{
+        background-color: lighten(v.$grisOscuro, 5);
+    }
+
+    & .icono{
+        filter: invert(100%);
+    }
+}

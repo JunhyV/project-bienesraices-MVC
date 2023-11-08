@@ -1,0 +1,44 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+@mixin espaciado ($espaciado) {
+    max-width: $espaciado;
+    padding: 0 calc(v.$separacion / 2);
+}
+@mixin boton($color){
+    background-color: $color;
+    border: none;
+    display: flex;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-weight: v.$bold;
+    margin-bottom: 2rem;
+    color: v.$blanco;
+
+    &:hover{
+        background-color: darken($color, 5);
+        cursor: pointer;
+    }
+}
